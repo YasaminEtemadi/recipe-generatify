@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js"></script>
+    <title>Recipe Generatify</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul>
+            <li>
+                <i class="material-icons" id="logo" style="color:#e0a416; font-size: 2.5rem; margin-left: 2rem; margin-top: 0.7rem; margin-right: 2rem; margin-bottom: 0.5rem;">dinner_dining</i>
+            </li>
+            <li>
+                <a href="main.html"><h3>Recipe Generatify</h3></a>
+            </li>
+            <!-- Button used to open sidenav -->
+            <div class="topnav-right">
+                <li>
+                    <a href="#"><i class="material-icons" id="menu-btn" style="text-align: right; color: black; font-size: 2.5rem; margin-top: 1rem;" onclick="openNav(event)">menu</i></a>
+                </li>
+             </div>
+        </ul>
+    </nav>
+    <!-- Sidenav on right side of screen when menu button is clicked on -->
+    <!-- https://www.w3schools.com/howto/howto_js_sidenav.asp -->
+    <div id="mySidenav" class="sidenav">
+        <!-- X button top left corner -->
+        <i class="material-icons" id="close-menu-btn" style="color: black; font-size: 2.5rem; text-align: left; cursor: pointer;" onclick="closeNav()">close</i>
+        <a href="how-to-use.html">How to Use</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="login.html">Login</a>
+    </div>
+
+    <!-- Opening page -->
+     <div class="content-wrapper">
+        <!-- Slideshow -->
+        <div class="slideshow-container">
+            <!-- Images -->
+            <div class="myslides fade">
+                <img src="../images/img2.jpg" style="width: 100%; opacity: 0.4;" alt="pancakes">
+                <div class="home-center2">
+                    <div class="text">Recipe Generatify</div>
+                    <div class="caption">Taking cooking to the next level, without all the hassle</div>
+                    <button class="find-new-recipe" style="border-color:#e0a416;" onclick="window.location.href='signup.html'"><span>Get started</span></button>
+                </div>
+            </div>
+            <div class="myslides fade">
+                <img src="../images/img3.jpg" style="width: 100%; opacity: 0.4;" alt="pasta">
+                <div class="home-center2">
+                    <div class="text" style="bottom: 8rem; margin-bottom: 1.5rem;">Recipe Generatify</div>
+                    <div class="caption" style="bottom: 4rem; margin-bottom: 1.8rem; margin-top: 2rem;">Taking cooking to the next level, without all the hassle</div>
+                    <button class="find-new-recipe" style="margin-top: 5rem; border-color:#e0a416;" onclick="window.location.href='signup.html'"><span>Get started</span></button>
+                </div>
+            </div>
+            <div class="myslides fade">
+                <img src="../images/img4.jpg" style="width: 100%; opacity: 0.4;" alt="pizza">
+                <div class="home-center2">
+                    <div class="text" style="bottom: 10rem;">Recipe Generatify</div>
+                    <div class="caption" style="bottom: 6rem;">Taking cooking to the next level, without all the hassle</div>
+                    <button class="find-new-recipe" style="border-color:#e0a416;" onclick="window.location.href='signup.html'"><span>Get started</span></button>
+                </div>
+            </div>
+            <div class="myslides fade">
+                <img src="../images/img5.jpg" style="width: 100%; opacity: 0.4;" alt="burger with fries">
+                <div class="home-center2">
+                    <div class="text" style="bottom: 10rem;">Recipe Generatify</div>
+                    <div class="caption" style="bottom: 6rem;">Taking cooking to the next level, without all the hassle</div>
+                    <button class="find-new-recipe" style="border-color:#e0a416;" onclick="window.location.href='signup.html'"><span>Get started</span></button>
+                </div>
+            </div>
+            <div class="myslides fade">
+                <img src="../images/img6.jpg" style="width: 100%; opacity: 0.4;" alt="cheesecake slice">
+                <div class="home-center2">
+                    <div class="text" style="bottom: 12rem;">Recipe Generatify</div>
+                    <div class="caption" style="bottom: 8rem;">Taking cooking to the next level, without all the hassle</div>
+                    <button class="find-new-recipe" style="border-color:#e0a416; top: 1rem;" onclick="window.location.href='signup.html'"><span>Get started</span></button>
+                </div>
+            </div>
+        </div>
+        <!-- The dots at the bottom -->
+        <div style="text-align: center;">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <!-- Information -->
+    <hr style="margin-top: 6rem;">
+    <section class="icon-section">
+        <i class="material-icons" id="search-icon" style="color:#e0a416; font-size: 3.5rem; text-align: center; display: inline-block; margin-top: 2rem;">search</i>
+    </section>
+    <section class="text-section">
+        <h2 style="color:black; display: inline-block; margin-top: 2rem;">Find healthy, easy, and delicious recipes by simply entering the ingredients you already have available</h2>
+    </section>
+    
+    <hr>
+    <section class="icon-section">
+        <i class="material-icons" id="search-icon" style="color:#e0a416; font-size: 3.5rem; text-align: center; display: inline-block;">computer</i>
+    </section>
+    <section class="text-section">
+        <h2 style="color:black; display: inline-block; ">Unique recipes generated every time with the help of artificial intelligence</h2>
+    </section>
+    
+    <hr>
+    <section class="icon-section">
+        <i class="material-icons" id="search-icon" style="color:#e0a416; font-size: 3.5rem; text-align: center; display: inline-block;">rocket_launch</i>
+    </section>
+    <section class="text-section">
+        <h2 style="color: black; display: inline-block; ">Quick and easy recipes, especially useful for when you're short on time</h2>
+    </section>
+    <hr>
+
+    <div class="footer">
+        <h2 style="font-size: 1.2rem; text-align: center; margin-top: 2rem; font-family: 'DM Serif Text', serif; color: #FFF3E0;">Recipe Generatify</h2>
+        <h6>Copyright © Recipe Generatify 2025</h6>
+    </div>
+
+    <!-- Starting the slideshow when the page loads -->
+    <script>
+        document/addEventListener('DOMContentLoaded', function() {
+            // Showing first slide
+            let slides = document.getElementsByClassName("myslides");
+            if (slides.length > 0) {
+                slides[0].style.display = "block";
+                showSlides();
+            }
+            else {
+                console.error("myslides not found");
+            }
+        });
+    </script>
+
+    <script>
+        window.onscroll = scrollDown;
+    </script>
+    
+</body>

@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="../js/generating-recipe.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/client-saving-data.js"></script>
+    <title>Select Available Ingredients- Recipe Generatify</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul>
+            <li>
+                <i class="material-icons" id="logo" style="color:#e0a416; font-size: 2.5rem; margin-left: 2rem; margin-top: 0.7rem; margin-right: 2rem; margin-bottom: 0.5rem;">dinner_dining</i>
+            </li>
+            <li>
+                <a href="home.html"><h3>Recipe Generatify</h3></a>
+            </li>
+            <!-- Button used to open sidenav -->
+            <div class="topnav-right">
+                <li>
+                    <a href="#"><i class="material-icons" id="menu-btn" style="text-align: right; color: black; font-size: 2.5rem; margin-top: 1rem;" onclick="openNav(event)">menu</i></a>
+                </li>
+             </div>
+        </ul>
+    </nav>
+    <!-- Sidenav on right side of screen when menu button is clicked on -->
+    <!-- https://www.w3schools.com/howto/howto_js_sidenav.asp -->
+    <div id="mySidenav" class="sidenav">
+        <!-- X button top left corner -->
+        <i class="material-icons" id="close-menu-btn" style="color: black; font-size: 2.5rem; text-align: left; cursor: pointer;" onclick="closeNav()">close</i>
+        <a href="how-to-use.html">How to Use</a>
+        <a href="main.html">Log Out</a>
+    </div>
+
+    <div class="home-center">
+        <h1 style="margin-bottom: 2.5rem;">Select Available Ingredients</h1>
+    </div>
+
+    <!-- Categories with dropdown checkboxes -->
+     <!-- CATEGORY 1: Pasta -->
+     <form>
+        <div class="multiple-selection">
+            <div class="select-box" onclick="showCheckboxes('pastaCheckboxes')">
+                <!-- Category name -->
+                <select>
+                    <option>Pasta</option>
+                </select>
+                <div class="over-select"></div>
+            </div>
+            <!-- Checkboxes -->
+             <div class="checkboxes" id="pastaCheckboxes">
+                <label for="penne">
+                    <input type="checkbox" id="penne"/>
+                    Penne
+                </label>
+                <script>
+                    let penneCheck = document.getElementById('penne');
+                    penneCheck.addEventListener("change", () => {
+                        isChecked('penne');
+                    })
+                </script>
+
+                <label for="rigatoni">
+                    <input type="checkbox" id="rigatoni"/>
+                    Rigatoni
+                </label>
+                <script>
+                    let rigatoniCheck = document.getElementById('rigatoni');
+                    rigatoniCheck.addEventListener("change", () => {
+                        isChecked('rigatoni');
+                    })
+                </script>
+
+                <label for="spaghetti">
+                    <input type="checkbox" id="spaghetti"/>
+                    Spaghetti
+                </label>
+                <script>
+                    let spaghettiCheck = document.getElementById('spaghetti');
+                    spaghettiCheck.addEventListener("change", () => {
+                        isChecked('spaghetti');
+                    })
+                </script>
+
+                <label for="fusilli">
+                    <input type="checkbox" id="fusilli"/>
+                    Fusilli
+                </label>
+                <script>
+                    let fusilliCheck = document.getElementById('fusilli');
+                    fusilliCheck.addEventListener("change", () => {
+                        isChecked('fusilli');
+                    })
+                </script>
+
+                <label for="fettuccine">
+                    <input type="checkbox" id="fettuccine"/>
+                    Fettuccine
+                </label>
+                <script>
+                    let fettuccineCheck = document.getElementById('fettuccine');
+                    fettuccineCheck.addEventListener("change", () => {
+                        isChecked('fettuccine');
+                    })
+                </script>
+
+                <label for="linguine">
+                    <input type="checkbox" id="linguine"/>
+                    Linguine
+                </label>
+                <script>
+                    let linguineCheck = document.getElementById('linguine');
+                    linguineCheck.addEventListener("change", () => {
+                        isChecked('linguine');
+                    })
+                </script>
+
+                <label for="farfalle">
+                    <input type="checkbox" id="farfalle"/>
+                    Farfalle
+                </label>
+                <script>
+                    let farfalleCheck = document.getElementById('farfalle');
+                    farfalleCheck.addEventListener("change", () => {
+                        isChecked('farfalle');
+                    })
+                </script>
+             </div>
+        </div>
+    </form>
+     <!-- CATEGORY 2: Spices-->
+     <form>
+        <div class="multiple-selection">
+            <div class="select-box" onclick="showCheckboxes('spicesCheckboxes')">
+                <!-- Category name -->
+                <select>
+                    <option>Spices</option>
+                </select>
+                <div class="over-select"></div>
+            </div>
+            <!-- Checkboxes -->
+             <div class="checkboxes" id="spicesCheckboxes">
+                <label for="dried basil">
+                    <input type="checkbox" id="dried basil"/>
+                    Dried basil
+                </label>
+                <script>
+                    let basilCheck = document.getElementById('dried basil');
+                    basilCheck.addEventListener("change", () => {
+                        isChecked('dried basil');
+                    })
+                </script>
+
+                <label for="bay leaves">
+                    <input type="checkbox" id="bay leaves"/>
+                    Bay leaves
+                </label>
+                <script>
+                    let bayCheck = document.getElementById('bay leaves');
+                    bayCheck.addEventListener("change", () => {
+                        isChecked('bay leaves');
+                    })
+                </script>
+
+                <label for="cayenne">
+                    <input type="checkbox" id="cayenne"/>
+                    Cayenne
+                </label>
+                <script>
+                    let cayenneCheck = document.getElementById('cayenne');
+                    cayenneCheck.addEventListener("change", () => {
+                        isChecked('cayenne');
+                    })
+                </script>
+
+                <label for="crushed red pepper flakes">
+                    <input type="checkbox" id="crushed red pepper flakes"/>
+                    Crushed red pepper flakes
+                </label>
+                <script>
+                    let crushedCheck = document.getElementById('crushed red pepper flakes');
+                    crushedCheck.addEventListener("change", () => {
+                        isChecked('crushed red pepper flakes');
+                    })
+                </script>
+
+                <label for="curry powder">
+                    <input type="checkbox" id="curry powder"/>
+                    Curry powder
+                </label>
+                <script>
+                    let curryCheck = document.getElementById('curry powder');
+                    curryCheck.addEventListener("change", () => {
+                        isChecked('curry powder');
+                    })
+                </script>
+
+                <label for="sea salt">
+                    <input type="checkbox" id="sea salt"/>
+                    Sea salt
+                </label>
+                <script>
+                    let seaCheck = document.getElementById('sea salt');
+                    seaCheck.addEventListener("change", () => {
+                        isChecked('sea salt');
+                    })
+                </script>
+
+                <label for="salt">
+                    <input type="checkbox" id="salt"/>
+                    Salt
+                </label>
+                <script>
+                    let saltCheck = document.getElementById('salt');
+                    saltCheck.addEventListener("change", () => {
+                        isChecked('salt');
+                    })
+                </script>
+
+                <label for="chili powder">
+                    <input type="checkbox" id="chili powder"/>
+                    Chili powder
+                </label>
+                <script>
+                    let chiliCheck = document.getElementById('chili powder');
+                    chiliCheck.addEventListener("change", () => {
+                        isChecked('chili powder');
+                    })
+                </script>
+
+                <label for="cumin">
+                    <input type="checkbox" id="cumin"/>
+                    Cumin
+                </label>
+                <script>
+                    let cuminCheck = document.getElementById('cumin');
+                    cuminCheck.addEventListener("change", () => {
+                        isChecked('cumin');
+                    })
+                </script>
+
+                <label for="garlic powder">
+                    <input type="checkbox" id="garlic powder"/>
+                    Garlic powder
+                </label>
+                <script>
+                    let garlicPowCheck = document.getElementById('garlic powder');
+                    garlicPowCheck.addEventListener("change", () => {
+                        isChecked('garlic powder');
+                    })
+                </script>
+
+                <label for="cinammon">
+                    <input type="checkbox" id="cinammon"/>
+                    Cinammon
+                </label>
+                <script>
+                    let cinammonCheck = document.getElementById('cinammon');
+                    cinammonCheck.addEventListener("change", () => {
+                        isChecked('cinammon');
+                    })
+                </script>
+
+                <label for="oregano">
+                    <input type="checkbox" id="oregano"/>
+                    Oregano
+                </label>
+                <script>
+                    let oreganoCheck = document.getElementById('oregano');
+                    oreganoCheck.addEventListener("change", () => {
+                        isChecked('oregano');
+                    })
+                </script>
+
+                <label for="paprika">
+                    <input type="checkbox" id="paprika"/>
+                    Paprika
+                </label>
+                <script>
+                    let paprikaCheck = document.getElementById('paprika');
+                    paprikaCheck.addEventListener("change", () => {
+                        isChecked('paprika');
+                    })
+                </script>
+
+                <label for="dried parsley">
+                    <input type="checkbox" id="dried parsley"/>
+                    Dried parsley
+                </label>
+                <script>
+                    let parsleyCheck = document.getElementById('dried parsley');
+                    parsleyCheck.addEventListener("change", () => {
+                        isChecked('dried parsley');
+                    })
+                </script>
+
+                <label for="thyme">
+                    <input type="checkbox" id="thyme"/>
+                    Thyme
+                </label>
+                <script>
+                    let thymeCheck = document.getElementById('thyme');
+                    thymeCheck.addEventListener("change", () => {
+                        isChecked('thyme');
+                    })
+                </script>
+
+                <label for="rosemary">
+                    <input type="checkbox" id="rosemary"/>
+                    Rosemary
+                </label>
+                <script>
+                    let rosemaryCheck = document.getElementById('rosemary');
+                    rosemaryCheck.addEventListener("change", () => {
+                        isChecked('rosemary');
+                    })
+                </script>
+
+                <label for="onion-powder">
+                    <input type="checkbox" id="onion-powder"/>
+                    Onion powder
+                </label>
+                <script>
+                    let onionPowCheck = document.getElementById('onion-powder');
+                    onionPowCheck.addEventListener("change", () => {
+                        isChecked('onion-powder');
+                    })
+                </script>
+
+             </div>
+        </div>
+    </form>
+    <!-- CATEGORY 3: Oils and Condiments-->
+    <form>
+        <div class="multiple-selection">
+            <div class="select-box" onclick="showCheckboxes('condimentsCheckboxes')">
+                <!-- Category name -->
+                <select>
+                    <option>Oils and Condiments</option>
+                </select>
+                <div class="over-select"></div>
+            </div>
+            <!-- Checkboxes -->
+             <div class="checkboxes" id="condimentsCheckboxes">
+                <label for="canola oil">
+                    <input type="checkbox" id="canola oil"/>
+                    Canola oil
+                </label>
+                <script>
+                    let canolaCheck = document.getElementById('canola oil');
+                    canolaCheck.addEventListener("change", () => {
+                        isChecked('canola oil');
+                    })
+                </script>
+
+                <label for="vegetable oil">
+                    <input type="checkbox" id="vegetable oil"/>
+                    Vegetable oil
+                </label>
+                <script>
+                    let vegetableCheck = document.getElementById('vegetable oil');
+                    vegetableCheck.addEventListener("change", () => {
+                        isChecked('vegetable oil');
+                    })
+                </script>
+
+                <label for="extra virgin olive oil">
+                    <input type="checkbox" id="extra virgin olive oil"/>
+                    Extra virgin olive oil
+                </label>
+                <script>
+                    let oliveOilCheck = document.getElementById('extra virgin olive oil');
+                    oliveOilCheck.addEventListener("change", () => {
+                        isChecked('extra virgin olive oil');
+                    })
+                </script>
+
+                <label for="peanut oil">
+                    <input type="checkbox" id="peanut oil"/>
+                    Peanut oil
+                </label>
+                <script>
+                    let peanutCheck = document.getElementById('peanut oil');
+                    peanutCheck.addEventListener("change", () => {
+                        isChecked('peanut oil');
+                    })
+                </script>
+
+                <label for="balsamic vinegar">
+                    <input type="checkbox" id="balsamic vinegar"/>
+                    Balsamic vinegar
+                </label>
+                <script>
+                    let balsamicCheck = document.getElementById('balsamic vinegar');
+                    balsamicCheck.addEventListener("change", () => {
+                        isChecked('balsamic vinegar');
+                    })
+                </script>
+
+                <label for="red wine vinegar">
+                    <input type="checkbox" id="red wine vinegar"/>
+                    Red wine vinegar
+                </label>
+                <script>
+                    let redWineCheck = document.getElementById('red wine vinegar');
+                    redWineCheck.addEventListener("change", () => {
+                        isChecked('red wine vinegar');
+                    })
+                </script>
+
+                <label for="soy sauce">
+                    <input type="checkbox" id="soy sauce"/>
+                    Soy sauce
+                </label>
+                <script>
+                    let soyCheck = document.getElementById('soy sauce');
+                    soyCheck.addEventListener("change", () => {
+                        isChecked('soy sauce');
+                    })
+                </script>
+
+                <label for="ketchup">
+                    <input type="checkbox" id="ketchup"/>
+                    Ketchup
+                </label>
+                <script>
+                    let ketchupCheck = document.getElementById('ketchup');
+                    ketchupCheck.addEventListener("change", () => {
+                        isChecked('ketchup');
+                    })
+                </script>
+
+                <label for="mustard">
+                    <input type="checkbox" id="mustard"/>
+                    Mustard
+                </label>
+                <script>
+                    let mustardCheck = document.getElementById('mustard');
+                    mustardCheck.addEventListener("change", () => {
+                        isChecked('mustard');
+                    })
+                </script>
+
+                <label for="dijon mustard">
+                    <input type="checkbox" id="dijon mustard"/>
+                    Dijon mustard
+                </label>
+                <script>
+                    let dijonCheck = document.getElementById('dijon mustard');
+                    dijonCheck.addEventListener("change", () => {
+                        isChecked('dijon mustard');
+                    })
+                </script>
+
+                <label for="chili paste">
+                    <input type="checkbox" id="chili paste"/>
+                    Chili paste
+                </label>
+                <script>
+                    let chiliPasteCheck = document.getElementById('chili paste');
+                    chiliPasteCheck.addEventListener("change", () => {
+                        isChecked('chili paste');
+                    })
+                </script>
+
+                <label for="tomato paste">
+                    <input type="checkbox" id="tomato paste"/>
+                    Tomato paste
+                </label>
+                <script>
+                    let tomatoPasteCheck = document.getElementById('tomato paste');
+                    tomatoPasteCheck.addEventListener("change", () => {
+                        isChecked('tomato paste');
+                    })
+                </script>
+
+                <label for="hot sauce">
+                    <input type="checkbox" id="hot sauce"/>
+                    Hot sauce
+                </label>
+                <script>
+                    let hotSauceCheck = document.getElementById('hot sauce');
+                    hotSauceCheck.addEventListener("change", () => {
+                        isChecked('hot sauce');
+                    })
+                </script>
+
+                <label for="worcestershire">
+                    <input type="checkbox" id="worcestershire"/>
+                    Worcestershire sauce
+                </label>
+                <script>
+                    let worcestershireCheck = document.getElementById('worcestershire');
+                    worcestershireCheck.addEventListener("change", () => {
+                        isChecked('worcestershire');
+                    })
+                </script>
+
+             </div>
+        </div>
+    </form>
+    <!-- CATEGORY 4: Grains-->
+    <form>
+        <div class="multiple-selection">
+            <div class="select-box" onclick="showCheckboxes('grainsCheckboxes')">
+                <!-- Category name -->
+                <select>
+                    <option>Grains</option>
+                </select>
+                <div class="over-select"></div>
+            </div>
+            <!-- Checkboxes -->
+             <div class="checkboxes" id="grainsCheckboxes">
+                <label for="breadcrumbs">
+                    <input type="checkbox" id="breadcrumbs"/>
+                    Breadcrumbs
+                </label>
+                <script>
+                    let breadcrumbsCheck = document.getElementById('breadcrumbs');
+                    breadcrumbsCheck.addEventListener("change", () => {
+                        isChecked('breadcrumbs');
+                    })
+                </script>
+
+                <label for="couscous">
+                    <input type="checkbox" id="couscous"/>
+                    Couscous
+                </label>
+                <script>
+                    let couscousCheck = document.getElementById('couscous');
+                    couscousCheck.addEventListener("change", () => {
+                        isChecked('couscous');
+                    })
+                </script>
+
+                <label for="quinoa">
+                    <input type="checkbox" id="quinoa"/>
+                    Quinoa
+                </label>
+                <script>
+                    let quinoaCheck = document.getElementById('quinoa');
+                    quinoaCheck.addEventListener("change", () => {
+                        isChecked('quinoa');
+                    })
+                </script>
+
+                <label for="basmati rice">
+                    <input type="checkbox" id="basmati rice"/>
+                    Basmati rice
+                </label>
+                <script>
+                    let basmatiCheck = document.getElementById('basmati rice');
+                    basmatiCheck.addEventListener("change", () => {
+                        isChecked('basmati rice');
+                    })
+                </script>
+
+                <label for="brown rice">
+                    <input type="checkbox" id="brown rice"/>
+                    Brown rice
+                </label>
+                <script>
+                    let brownRiceCheck = document.getElementById('brown rice');
+                    brownRiceCheck.addEventListener("change", () => {
+                        isChecked('brown rice');
+                    })
+                </script>
+
+                <label for="barley">
+                    <input type="checkbox" id="barley"/>
+                    Barley
+                </label>
+                <script>
+                    let barleyCheck = document.getElementById('barley');
+                    barleyCheck.addEventListener("change", () => {
+                        isChecked('barley');
+                    })
+                </script>
+
+                <label for="rolled oats">
+                    <input type="checkbox" id="rolled oats"/>
+                    Rolled oats
+                </label>
+                <script>
+                    let oatsCheck = document.getElementById('rolled oats');
+                    oatsCheck.addEventListener("change", () => {
+                        isChecked('rolled oats');
+                    })
+                </script>
+
+             </div>
+        </div>
+    </form>
+    <!-- CATEGORY 5: Legumes-->
+    <form>
+        <div class="multiple-selection">
+            <div class="select-box" onclick="showCheckboxes('legumesCheckboxes')">
+                <!-- Category name -->
+                <select>
+                    <option>Legumes</option>
+                </select>
+                <div class="over-select"></div>
+            </div>
+            <!-- Checkboxes -->
+             <div class="checkboxes" id="legumesCheckboxes">
+                <label for="chickpeas">
+                    <input type="checkbox" id="chickpeas"/>
+                    Chickpeas
+                </label>
+                <script>
+                    let chickpeasCheck = document.getElementById('chickpeas');
+                    chickpeasCheck.addEventListener("change", () => {
+                        isChecked('chickpeas');
+                    })
+                </script>
+
+                <label for="black beans">
+                    <input type="checkbox" id="black beans"/>
+                    Black beans
+                </label>
+                <script>
+                    let blackBeansCheck = document.getElementById('black beans');
+                    blackBeansCheck.addEventListener("change", () => {
+                        isChecked('black beans');
+                    })
+                </script>
+
+                <label for="green peas">
+                    <input type="checkbox" id="green peas"/>
+                    Green peas
+                </label>
+                <script>
+                    let peasCheck = document.getElementById('green peas');
+                    peasCheck.addEventListener("change", () => {
+                        isChecked('green peas');
+                    })
+                </script>
+
+                <label for="lima beans">
+                    <input type="checkbox" id="lima beans"/>
+                    Lima beans
+                </label>
+                <script>
+                    let limaCheck = document.getElementById('lima beans');
+                    limaCheck.addEventListener("change", () => {
+                        isChecked('lima beans');
+                    })
+                </script>
+
+                <label for="kidney beans">
+                    <input type="checkbox" id="kidney beans"/>
+                    Kidney beans
+                </label>
+                <script>
+                    let kidneyCheck = document.getElementById('kidney beans');
+                    kidneyCheck.addEventListener("change", () => {
+                        isChecked('kidney beans');
+                    })
+                </script>
+
+                <label for="black-eyed peas">
+                    <input type="checkbox" id="black-eyed peas"/>
+                    Black-eyed peas
+                </label>
+                <script>
+                    let blackEyedCheck = document.getElementById('black-eyed peas');
+                    blackEyedCheck.addEventListener("change", () => {
+                        isChecked('black-eyed peas');
+                    })
+                </script>
+
+                <label for="lentils">
+                    <input type="checkbox" id="lentils"/>
+                    Lentils
+                </label>
+                <script>
+                    let lentilsCheck = document.getElementById('lentils');
+                    lentilsCheck.addEventListener("change", () => {
+                        isChecked('lentils');
+                    })
+                </script>
+
+             </div>
+        </div>
+    </form>
+    <!-- CATEGORY 6: Fruits-->
+    <form>
+        <div class="multiple-selection">
+            <div class="select-box" onclick="showCheckboxes('fruitsCheckboxes')">
+                <!-- Category name -->
+                <select>
+                    <option>Fruits</option>
+                </select>
+                <div class="over-select"></div>
+            </div>
+            <!-- Checkboxes -->
+             <div class="checkboxes" id="fruitsCheckboxes">
+                <label for="apples">
+                    <input type="checkbox" id="apples"/>
+                    Apples
+                </label>
+                <script>
+                    let applesCheck = document.getElementById('apples');
+                    applesCheck.addEventListener("change", () => {
+                        isChecked('apples');
+                    })
+                </script>
+
+                <label for="oranges">
+                    <input type="checkbox" id="oranges"/>
+                    Oranges
+                </label>
+                <script>
+                    let orangesCheck = document.getElementById('oranges');
+                    orangesCheck.addEventListener("change", () => {
+                        isChecked('oranges');
+                    })
+                </script>
+
+                <label for="lemons">
+                    <input type="checkbox" id="lemons"/>
+                    Lemons
+                </label>
+                <script>
+                    let lemonsCheck = document.getElementById('lemons');
+                    lemonsCheck.addEventListener("change", () => {
+                        isChecked('lemons');
+                    })
+                </script>
+
+                <label for="limes">
+                    <input type="checkbox" id="limes"/>
+                    Limes
+                </label>
+                <script>
+                    let limesCheck = document.getElementById('limes');
+                    limesCheck.addEventListener("change", () => {
+                        isChecked('limes');
+                    })
+                </script>
+
+                <label for="bananas">
+                    <input type="checkbox" id="bananas"/>
+                    Bananas
+                </label>
+                <script>
+                    let bananasCheck = document.getElementById('bananas');
+                    bananasCheck.addEventListener("change", () => {
+                        isChecked('bananas');
+                    })
+                </script>
+
+                <label for="strawberries">
+                    <input type="checkbox" id="strawberries"/>
+                    Strawberries
+                </label>
+                <script>
+                    let strawberriesCheck = document.getElementById('strawberries');
+                    strawberriesCheck.addEventListener("change", () => {
+                        isChecked('strawberries');
+                    })
+                </script>
+
+                <label for="blueberries">
+                    <input type="checkbox" id="blueberries"/>
+                    Blueberries
+                </label>
+                <script>
+                    let blueberriesCheck = document.getElementById('blueberries');
+                    blueberriesCheck.addEventListener("change", () => {
+                        isChecked('blueberries');
+                    })
+                </script>
+
+                <label for="raspberries">
+                    <input type="checkbox" id="raspberries"/>
+                    Raspberries
+                </label>
+                <script>
+                    let raspberriesCheck = document.getElementById('raspberries');
+                    raspberriesCheck.addEventListener("change", () => {
+                        isChecked('raspberries');
+                    })
+                </script>
+
+                <label for="peaches">
+                    <input type="checkbox" id="peaches"/>
+                    Peaches
+                </label>
+                <script>
+                    let peachesCheck = document.getElementById('peaches');
+                    peachesCheck.addEventListener("change", () => {
+                        isChecked('peaches');
+                    })
+                </script>
+
+                <label for="pears">
+                    <input type="checkbox" id="pears"/>
+                    Pears
+                </label>
+                <script>
+                    let pearsCheck = document.getElementById('pears');
+                    pearsCheck.addEventListener("change", () => {
+                        isChecked('pears');
+                    })
+                </script>
+
+                <label for="plums">
+                    <input type="checkbox" id="plums"/>
+                    Plums
+                </label>
+                <script>
+                    let plumsCheck = document.getElementById('plums');
+                    plumsCheck.addEventListener("change", () => {
+                        isChecked('plums');
+                    })
+                </script>
+
+                <label for="mangoes">
+                    <input type="checkbox" id="mangoes"/>
+                    Mangoes
+                </label>
+                <script>
+                    let mangoesCheck = document.getElementById('mangoes');
+                    mangoesCheck.addEventListener("change", () => {
+                        isChecked('mangoes');
+                    })
+                </script>
+
+                <label for="pineapples">
+                    <input type="checkbox" id="pineapples"/>
+                    Pineapples
+                </label>
+                <script>
+                    let pineapplesCheck = document.getElementById('pineapples');
+                    pineapplesCheck.addEventListener("change", () => {
+                        isChecked('pineapples');
+                    })
+                </script>
+
+             </div>
+        </div>
+    </form>
+    <!-- CATEGORY 7: Vegetables-->
+    <form>
+        <div class="multiple-selection">
+            <div class="select-box" onclick="showCheckboxes('vegetablesCheckboxes')">
+                <!-- Category name -->
+                <select>
+                    <option>Vegetables</option>
+                </select>
+                <div class="over-select"></div>
+            </div>
+            <!-- Checkboxes -->
+             <div class="checkboxes" id="vegetablesCheckboxes">
+                <label for="bok choy">
+                    <input type="checkbox" id="bok choy"/>
+                    Bok choy
+                </label>
+                <script>
+                    let bokChoyCheck = document.getElementById('bok choy');
+                    bokChoyCheck.addEventListener("change", () => {
+                        isChecked('bok choy');
+                    })
+                </script>
+
+                <label for="broccoli">
+                    <input type="checkbox" id="broccoli"/>
+                    Broccoli
+                </label>
+                <script>
+                    let broccoliCheck = document.getElementById('broccoli');
+                    broccoliCheck.addEventListener("change", () => {
+                        isChecked('broccoli');
+                    })
+                </script>
+
+                <label for="leeks">
+                    <input type="checkbox" id="leeks"/>
+                    Leeks
+                </label>
+                <script>
+                    let leeksCheck = document.getElementById('leeks');
+                    leeksCheck.addEventListener("change", () => {
+                        isChecked('leeks');
+                    })
+                </script>
+
+                <label for="brussels sprouts">
+                    <input type="checkbox" id="brussels sprouts"/>
+                    Brussels sprouts
+                </label>
+                <script>
+                    let sproutsCheck = document.getElementById('brussels sprouts');
+                    sproutsCheck.addEventListener("change", () => {
+                        isChecked('brussels sprouts');
+                    })
+                </script>
+
+                <label for="cabbage">
+                    <input type="checkbox" id="cabbage"/>
+                    Cabbage
+                </label>
+                <script>
+                    let cabbageCheck = document.getElementById('cabbage');
+                    cabbageCheck.addEventListener("change", () => {
+                        isChecked('cabbage');
+                    })
+                </script>
+
+                <label for="cauliflower">
+                    <input type="checkbox" id="cauliflower"/>
+                    Cauliflower
+                </label>
+                <script>
+                    let cauliflowerCheck = document.getElementById('cauliflower');
+                    cauliflowerCheck.addEventListener("change", () => {
+                        isChecked('cauliflower');
+                    })
+                </script>
+
+                <label for="sweet corn">
+                    <input type="checkbox" id="sweet corn"/>
+                    Sweet corn
+                </label>
+                <script>
+                    let cornCheck = document.getElementById('sweet corn');
+                    cornCheck.addEventListener("change", () => {
+                        isChecked('sweet corn');
+                    })
+                </script>
+
+                <label for="eggplant">
+                    <input type="checkbox" id="eggplant"/>
+                    Eggplant
+                </label>
+                <script>
+                    let eggplantCheck = document.getElementById('eggplant');
+                    eggplantCheck.addEventListener("change", () => {
+                        isChecked('eggplant');
+                    })
+                </script>
+
+                <label for="garlic">
+                    <input type="checkbox" id="garlic"/>
+                    Garlic
+                </label>
+                <script>
+                    let garlicCheck = document.getElementById('garlic');
+                    garlicCheck.addEventListener("change", () => {
+                        isChecked('garlic');
+                    })
+                </script>
+
+                <label for="onions">
+                    <input type="checkbox" id="onions"/>
+                    Onions
+                </label>
+                <script>
+                    let onionsCheck = document.getElementById('onions');
+                    onionsCheck.addEventListener("change", () => {
+                        isChecked('onions');
+                    })
+                </script>
+
+                <label for="mushrooms">
+                    <input type="checkbox" id="mushrooms"/>
+                    Mushrooms
+                </label>
+                <script>
+                    let mushroomsCheck = document.getElementById('mushrooms');
+                    mushroomsCheck.addEventListener("change", () => {
+                        isChecked('mushrooms');
+                    })
+                </script>
+
+                <label for="bell peppers">
+                    <input type="checkbox" id="bell peppers"/>
+                    Bell peppers
+                </label>
+                <script>
+                    let peppersCheck = document.getElementById('bell peppers');
+                    peppersCheck.addEventListener("change", () => {
+                        isChecked('bell peppers');
+                    })
+                </script>
+
+                <label for="chili peppers">
+                    <input type="checkbox" id="chili peppers"/>
+                    Chili peppers
+                </label>
+                <script>
+                    let chiliPeppersCheck = document.getElementById('chili peppers');
+                    chiliPeppersCheck.addEventListener("change", () => {
+                        isChecked('chili peppers');
+                    })
+                </script>
+
+                <label for="potatoes">
+                    <input type="checkbox" id="potatoes"/>
+                    Potatoes
+                </label>
+                <script>
+                    let potatoesCheck = document.getElementById('potatoes');
+                    potatoesCheck.addEventListener("change", () => {
+                        isChecked('potatoes');
+                    })
+                </script>
+
+                <label for="sweet potatoes">
+                    <input type="checkbox" id="sweet potatoes"/>
+                    Sweet potatoes
+                </label>
+                <script>
+                    let sweetPotatoesCheck = document.getElementById('sweet potatoes');
+                    sweetPotatoesCheck.addEventListener("change", () => {
+                        isChecked('sweet potatoes');
+                    })
+                </script>
+
+                <label for="spinach">
+                    <input type="checkbox" id="spinach"/>
+                    Spinach
+                </label>
+                <script>
+                    let spinachCheck = document.getElementById('spinach');
+                    spinachCheck.addEventListener("change", () => {
+                        isChecked('spinach');
+                    })
+                </script>
+
+                <label for="squash">
+                    <input type="checkbox" id="squash"/>
+                    Squash
+                </label>
+                <script>
+                    let squashCheck = document.getElementById('squash');
+                    squashCheck.addEventListener("change", () => {
+                        isChecked('squash');
+                    })
+                </script>
+
+             </div>
+        </div>
+    </form>
+    <!-- CATEGORY 8: DAIRY -->
+    <form>
+        <div class="multiple-selection">
+            <div class="select-box" onclick="showCheckboxes('dairyCheckboxes')">
+                <!-- Category name -->
+                <select>
+                    <option>Dairy</option>
+                </select>
+                <div class="over-select"></div>
+            </div>
+            <!-- Checkboxes -->
+             <div class="checkboxes" id="dairyCheckboxes">
+                <label for="milk">
+                    <input type="checkbox" id="milk"/>
+                    Milk
+                </label>
+                <script>
+                    let milkCheck = document.getElementById('milk');
+                    milkCheck.addEventListener("change", () => {
+                        isChecked('milk');
+                    })
+                </script>
+
+                <label for="butter">
+                    <input type="checkbox" id="butter"/>
+                    Butter
+                </label>
+                <script>
+                    let butterCheck = document.getElementById('butter');
+                    butterCheck.addEventListener("change", () => {
+                        isChecked('butter');
+                    })
+                </script>
+
+                <label for="cream">
+                    <input type="checkbox" id="cream"/>
+                    Cream
+                </label>
+                <script>
+                    let creamCheck = document.getElementById('cream');
+                    creamCheck.addEventListener("change", () => {
+                        isChecked('cream');
+                    })
+                </script>
+
+                <label for="cream cheese">
+                    <input type="checkbox" id="cream cheese"/>
+                    Cream cheese
+                </label>
+                <script>
+                    let creamCheeseCheck = document.getElementById('cream cheese');
+                    creamCheeseCheck.addEventListener("change", () => {
+                        isChecked('cream cheese');
+                    })
+                </script>
+
+                <label for="greek yogurt">
+                    <input type="checkbox" id="greek yogurt"/>
+                    Greek yogurt
+                </label>
+                <script>
+                    let greekCheck = document.getElementById('greek yogurt');
+                    greekCheck.addEventListener("change", () => {
+                        isChecked('greek yogurt');
+                    })
+                </script>
+
+                <label for="plain yogurt">
+                    <input type="checkbox" id="plain yogurt"/>
+                    Plain yogurt
+                </label>
+                <script>
+                    let plainCheck = document.getElementById('plain yogurt');
+                    plainCheck.addEventListener("change", () => {
+                        isChecked('plain yogurt');
+                    })
+                </script>
+
+                <label for="buttermilk">
+                    <input type="checkbox" id="buttermilk"/>
+                    Buttermilk
+                </label>
+                <script>
+                    let buttermilkCheck = document.getElementById('buttermilk');
+                    buttermilkCheck.addEventListener("change", () => {
+                        isChecked('buttermilk');
+                    })
+                </script>
+
+                <label for="condensed milk">
+                    <input type="checkbox" id="condensed milk"/>
+                    Condensed milk
+                </label>
+                <script>
+                    let condensedMilkCheck = document.getElementById('condensed milk');
+                    condensedMilkCheck.addEventListener("change", () => {
+                        isChecked('condensed milk');
+                    })
+                </script>
+
+                <label for="sour cream">
+                    <input type="checkbox" id="sour cream"/>
+                    Sour cream
+                </label>
+                <script>
+                    let sourCreamCheck = document.getElementById('sour cream');
+                    sourCreamCheck.addEventListener("change", () => {
+                        isChecked('sour cream');
+                    })
+                </script>
+
+                <label for="cheddar cheese">
+                    <input type="checkbox" id="cheddar cheese"/>
+                    Cheddar cheese
+                </label>
+                <script>
+                    let cheddarCheck = document.getElementById('cheddar cheese');
+                    cheddarCheck.addEventListener("change", () => {
+                        isChecked('cheddar cheese');
+                    })
+                </script>
+
+                <label for="feta">
+                    <input type="checkbox" id="feta"/>
+                    Feta 
+                </label>
+                <script>
+                    let fetaCheck = document.getElementById('feta');
+                    fetaCheck.addEventListener("change", () => {
+                        isChecked('feta');
+                    })
+                </script>
+
+                <label for="gouda">
+                    <input type="checkbox" id="gouda"/>
+                    Gouda
+                </label>
+                <script>
+                    let goudaCheck = document.getElementById('gouda');
+                    goudaCheck.addEventListener("change", () => {
+                        isChecked('gouda');
+                    })
+                </script>
+
+                <label for="mozzarella">
+                    <input type="checkbox" id="mozzarella"/>
+                    Mozzarella
+                </label>
+                <script>
+                    let mozzarellaCheck = document.getElementById('mozzarella');
+                    mozzarellaCheck.addEventListener("change", () => {
+                        isChecked('mozzarella');
+                    })
+                </script>
+
+                <label for="cottage cheese">
+                    <input type="checkbox" id="cottage cheese"/>
+                    Cottage cheese
+                </label>
+                <script>
+                    let cottageCheck = document.getElementById('cottage cheese');
+                    cottageCheck.addEventListener("change", () => {
+                        isChecked('cottage cheese');
+                    })
+                </script>
+
+             </div>
+        </div>
+    </form>
+    <!-- CATEGORY 9: BAKING NEEDS -->
+     <form>
+        <div class="multiple-selection">
+            <div class="select-box" onclick="showCheckboxes('bakingCheckboxes')">
+                <!-- Category name -->
+                <select>
+                    <option>Baking Needs</option>
+                </select>
+                <div class="over-select"></div>
+            </div>
+            <!-- Checkboxes -->
+             <div class="checkboxes" id="bakingCheckboxes">
+                <label for="all-purpose flour">
+                    <input type="checkbox" id="all-purpose flour"/>
+                    All-purpose flour
+                </label>
+                <script>
+                    let flourCheck = document.getElementById('all-purpose flour');
+                    flourCheck.addEventListener("change", () => {
+                        isChecked('all-purpose flour');
+                    })
+                </script>
+
+                <label for="baking soda">
+                    <input type="checkbox" id="baking soda"/>
+                    Baking soda
+                </label>
+                <script>
+                    let bakingSodaCheck = document.getElementById('baking soda');
+                    bakingSodaCheck.addEventListener("change", () => {
+                        isChecked('baking soda');
+                    })
+                </script>
+
+                <label for="baking powder">
+                    <input type="checkbox" id="baking powder"/>
+                    Baking powder
+                </label>
+                <script>
+                    let bakingPowderCheck = document.getElementById('baking powder');
+                    bakingPowderCheck.addEventListener("change", () => {
+                        isChecked('baking powder');
+                    })
+                </script>
+
+                <label for="baking yeast">
+                    <input type="checkbox" id="baking yeast"/>
+                    Baking yeast
+                </label>
+                <script>
+                    let bakingYeastCheck = document.getElementById('baking yeast');
+                    bakingYeastCheck.addEventListener("change", () => {
+                        isChecked('baking yeast');
+                    })
+                </script>
+
+                <label for="granulated sugar">
+                    <input type="checkbox" id="granulated sugar"/>
+                    Granulated sugar
+                </label>
+                <script>
+                    let granSugarCheck = document.getElementById('granulated sugar');
+                    granSugarCheck.addEventListener("change", () => {
+                        isChecked('granulated sugar');
+                    })
+                </script>
+
+                <label for="brown sugar">
+                    <input type="checkbox" id="brown sugar"/>
+                    Brown sugar
+                </label>
+                <script>
+                    let brownSugarCheck = document.getElementById('brown sugar');
+                    brownSugarCheck.addEventListener("change", () => {
+                        isChecked('brown sugar');
+                    })
+                </script>
+
+                <label for="eggs">
+                    <input type="checkbox" id="eggs"/>
+                    Eggs
+                </label>
+                <script>
+                    let eggsCheck = document.getElementById('eggs');
+                    eggsCheck.addEventListener("change", () => {
+                        isChecked('eggs');
+                    })
+                </script>
+
+                <label for="vanilla extract">
+                    <input type="checkbox" id="vanilla extract"/>
+                    Vanilla extract
+                </label>
+                <script>
+                    let vanillaCheck = document.getElementById('vanilla extract');
+                    vanillaCheck.addEventListener("change", () => {
+                        isChecked('vanilla extract');
+                    })
+                </script>
+
+                <label for="cocoa powder">
+                    <input type="checkbox" id="cocoa powder"/>
+                    Cocoa powder 
+                </label>
+                <script>
+                    let cocoaCheck = document.getElementById('cocoa powder');
+                    cocoaCheck.addEventListener("change", () => {
+                        isChecked('cocoa powder');
+                    })
+                </script>
+
+                <label for="chocolate chips">
+                    <input type="checkbox" id="chocolate chips"/>
+                    Chocolate chips
+                </label>
+                <script>
+                    let chocChipsCheck = document.getElementById('chocolate chips');
+                    chocChipsCheck.addEventListener("change", () => {
+                        isChecked('chocolate chips');
+                    })
+                </script>
+
+             </div>
+        </div>
+    </form>
+    <!-- CATEGORY 10: MEAT -->
+    <form>
+        <div class="multiple-selection">
+            <div class="select-box" onclick="showCheckboxes('meatCheckboxes')">
+                <!-- Category name -->
+                <select>
+                    <option>Meat</option>
+                </select>
+                <div class="over-select"></div>
+            </div>
+            <!-- Checkboxes -->
+             <div class="checkboxes" id="meatCheckboxes">
+                <label for="beef">
+                    <input type="checkbox" id="beef"/>
+                    Beef
+                </label>
+                <script>
+                    let beefCheck = document.getElementById('beef');
+                    beefCheck.addEventListener("change", () => {
+                        isChecked('beef');
+                    })
+                </script>
+
+                <label for="chicken">
+                    <input type="checkbox" id="chicken"/>
+                    Chicken
+                </label>
+                <script>
+                    let chickenCheck = document.getElementById('chicken');
+                    chickenCheck.addEventListener("change", () => {
+                        isChecked('chicken');
+                    })
+                </script>
+
+                <label for="lamb">
+                    <input type="checkbox" id="lamb"/>
+                    Lamb
+                </label>
+                <script>
+                    let lambCheck = document.getElementById('lamb');
+                    lambCheck.addEventListener("change", () => {
+                        isChecked('lamb');
+                    })
+                </script>
+
+                <label for="fish">
+                    <input type="checkbox" id="fish"/>
+                    Fish
+                </label>
+                <script>
+                    let fishCheck = document.getElementById('fish');
+                    fishCheck.addEventListener("change", () => {
+                        isChecked('fish');
+                    })
+                </script>
+
+                <label for="shrimp">
+                    <input type="checkbox" id="shrimp"/>
+                    Shrimp
+                </label>
+                <script>
+                    let shrimpCheck = document.getElementById('shrimp');
+                    shrimpCheck.addEventListener("change", () => {
+                        isChecked('shrimp');
+                    })
+                </script>
+
+                <label for="sausage">
+                    <input type="checkbox" id="sausage"/>
+                    Sausage
+                </label>
+                <script>
+                    let sausageCheck = document.getElementById('sausage');
+                    sausageCheck.addEventListener("change", () => {
+                        isChecked('sausage');
+                    })
+                </script>
+
+                <label for="turkey">
+                    <input type="checkbox" id="turkey"/>
+                    Turkey
+                </label>
+                <script>
+                    let turkeyCheck = document.getElementById('turkey');
+                    turkeyCheck.addEventListener("change", () => {
+                        isChecked('turkey');
+                    })
+                </script>
+             </div>
+        </div>
+    </form>
+
+    <!-- Select meal type selection menu -->
+     <form>
+        <div class="meal-type-container">
+            <select name="mealtype" id="mealtype" required>
+                <option value="">~Select meal type~</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="snack">Snack</option>
+                <option value="pastry">Pastry</option>
+             </select>
+         </div>
+     </form>
+    
+     <script>
+        document.getElementById('mealtype').addEventListener('change', function() {
+            saveMealType(this.value);
+        });
+     </script>
+
+    <button class="find-new-recipe" id="generate-recipe"><span>Generate recipe</span></button>
+    
+    <script>
+        let show = true;
+    </script>
+
+    <div class="footer">
+        <h2 style="font-size: 1.2rem; text-align: center; margin-top: 2rem; font-family: 'DM Serif Text', serif; color: #FFF3E0;">Recipe Generatify</h2>
+        <h6>Copyright © Recipe Generatify 2025</h6>
+    </div>
+
+    <script>
+        window.onscroll = scrollDown;
+    </script>
+
+</body>

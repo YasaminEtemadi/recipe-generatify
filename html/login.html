@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js"></script>
+    <title>Login- Recipe Generatify</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul>
+            <li>
+                <i class="material-icons" id="logo" style="color:#e0a416; font-size: 2.5rem; margin-left: 2rem; margin-top: 0.7rem; margin-right: 2rem; margin-bottom: 0.5rem;">dinner_dining</i>
+            </li>
+            <li>
+                <a href="main.html"><h3>Recipe Generatify</h3></a>
+            </li>
+            <!-- Button used to open sidenav -->
+            <div class="topnav-right">
+                <li>
+                    <a href="#"><i class="material-icons" id="menu-btn" style="text-align: right; color: black; font-size: 2.5rem; margin-top: 1rem;" onclick="openNav(event)">menu</i></a>
+                </li>
+             </div>
+        </ul>
+    </nav>
+    <!-- Sidenav on right side of screen when menu button is clicked on -->
+    <!-- https://www.w3schools.com/howto/howto_js_sidenav.asp -->
+    <div id="mySidenav" class="sidenav">
+        <!-- X button top left corner -->
+        <i class="material-icons" id="close-menu-btn" style="color: black; font-size: 2.5rem; text-align: left; cursor: pointer;" onclick="closeNav()">close</i>
+        <a href="how-to-use.html">How to Use</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="login.html">Login</a>
+    </div>
+
+    <div class="home-center">
+        <h1 style="margin-bottom: 2rem;">Login</h1>
+    </div>
+
+    <!-- Calling /login endpoint in server.js (post which means to SEND information) -->
+    <form action="/login" method="post">
+        <label for="email">Email: </label><br>
+        <input autocomplete="off" type="email" id="email" name="email" minlength="10" required><br>
+
+        <label for="password">Password: </label><br>
+        <input autocomplete="off" type="password" id="password" name="password" minlength="8" maxlength="20" required><br>
+        <!-- Checkbox to toggle password visibility -->
+         <input type="checkbox" onclick="togglePassword()" style="transform: scale(1.5); margin-top: 1rem;"><h4>Show password</h4>
+        
+        <button type="submit" class="find-new-recipe" value="Login" style="cursor: pointer; padding: 1rem 2rem; font-size: 1.1rem;">
+            <span>Login</span>
+        </button>
+    </form>
+
+    <h4>Don't have an account? <a href="signup.html">Sign up</a> instead.</h4>
+    
+    <div class="footer">
+        <h2 style="font-size: 1.2rem; text-align: center; margin-top: 2rem; font-family: 'DM Serif Text', serif; color: #FFF3E0;">Recipe Generatify</h2>
+        <h6>Copyright © Recipe Generatify 2025</h6>
+    </div>
+
+    <script>
+        window.onscroll = scrollDown;
+    </script>
+</body>

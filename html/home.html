@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js"></script>
+    <title>Home- Recipe Generatify</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul>
+            <li>
+                <i class="material-icons" id="logo" style="color:#e0a416; font-size: 2.5rem; margin-left: 2rem; margin-top: 0.7rem; margin-right: 2rem; margin-bottom: 0.5rem;">dinner_dining</i>
+            </li>
+            <li>
+                <a href="home.html"><h3>Recipe Generatify</h3></a>
+            </li>
+            <!-- Button used to open sidenav -->
+            <div class="topnav-right">
+                <li>
+                    <a href="#"><i class="material-icons" id="menu-btn" style="text-align: right; color: black; font-size: 2.5rem; margin-top: 1rem;" onclick="openNav(event)">menu</i></a>
+                </li>
+             </div>
+        </ul>
+    </nav>
+    <!-- Sidenav on right side of screen when menu button is clicked on -->
+    <!-- https://www.w3schools.com/howto/howto_js_sidenav.asp -->
+    <div id="mySidenav" class="sidenav">
+        <!-- X button top left corner -->
+        <i class="material-icons" id="close-menu-btn" style="color: black; font-size: 2.5rem; text-align: left; cursor: pointer;" onclick="closeNav()">close</i>
+        <a href="how-to-use.html">How to Use</a>
+        <a href="main.html">Log Out</a>
+    </div>
+
+    <div class="home-center">
+        <h1 style="margin-right: 1rem;">Welcome back, <h5 id="userFirstname">User</h5></h1>
+    </div>
+    
+    <button class="find-new-recipe" id="find-recipe" style="margin-bottom: 5rem;"><span>Find a new recipe</span></button>
+    
+    <div class="footer">
+        <h2 style="font-size: 1.2rem; text-align: center; margin-top: 2rem; font-family: 'DM Serif Text', serif; color: #FFF3E0;">Recipe Generatify</h2>
+        <h6>Copyright © Recipe Generatify 2025</h6>
+    </div>
+
+    <!-- EventListener for when find new recipe is clicked -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById("find-recipe").addEventListener("click", function(event) {
+                // Makes sure that the user is not redirected to checklist.html yet
+                event.preventDefault();
+                // Fetching reset ingredient list endpoint
+                fetch('/reset-ingredient-list', { method: 'POST' })
+                    .then(response => {
+                        if (response.ok) {
+                            console.log('Ingredient list has been reset successfully');
+                            // Redirect to checklist.html after ingredient list has been reset
+                            window.location.href = '/checklist.html';
+                        }
+                        else {
+                            console.error('Failed to reset ingredient list');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error: ', error);
+                    });
+            });
+        });
+     </script>
+
+    <!-- Adding user's first name from database -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fetching the home endpoint
+            fetch('/home')
+            // Convert response to JSON
+                .then(response => response.json())
+                .then(data => {
+                    if (data.firstname) {
+                        document.getElementById('userFirstname').textContent = data.firstname;
+                    }
+                })
+                .catch(error => console.error('Error: ', error));
+        });
+    </script>
+
+    <script>
+        window.onscroll = scrollDown;
+    </script>
+    
+</body>

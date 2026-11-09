@@ -1,0 +1,517 @@
+*{
+  padding: 0rem;
+  margin: 0rem;
+  align-items: center;
+}
+
+body {
+  background-color: #FFF3E0;
+}
+
+/* Fonts */
+/* DM Serif */
+.dm-serif-text-regular {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.dm-serif-text-regular-italic {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+/* Shippori Mincho*/
+.shippori-mincho-regular {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.shippori-mincho-medium {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.shippori-mincho-semibold {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.shippori-mincho-bold {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.shippori-mincho-extrabold {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+/* Poppins */
+.poppins-thin {
+  font-family: "Poppins", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+.poppins-extralight {
+  font-family: "Poppins", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+.poppins-light {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.poppins-regular {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.poppins-medium {
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.poppins-semibold {
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.poppins-bold {
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.poppins-extrabold {
+  font-family: "Poppins", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+.poppins-black {
+  font-family: "Poppins", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.poppins-thin-italic {
+  font-family: "Poppins", serif;
+  font-weight: 100;
+  font-style: italic;
+}
+.poppins-extralight-italic {
+  font-family: "Poppins", serif;
+  font-weight: 200;
+  font-style: italic;
+}
+.poppins-light-italic {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+.poppins-regular-italic {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.poppins-medium-italic {
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+.poppins-semibold-italic {
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+.poppins-bold-italic {
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.poppins-extrabold-italic {
+  font-family: "Poppins", serif;
+  font-weight: 800;
+  font-style: italic;
+}
+.poppins-black-italic {
+  font-family: "Poppins", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Text */
+h1 {
+  font-family: "DM Serif Text", serif;
+  font-weight: 600;
+  font-size: 3.5rem;
+  margin-top: 11rem;
+  text-align: center;
+  color: #000000;
+  display: inline-block;
+}
+h5 {
+  font-family: "DM Serif Text", serif;
+  font-weight: 600;
+  font-size: 4rem;
+  margin-top: 13rem;
+  text-align: center;
+  color:#cf9510;
+  display: inline-block;
+}
+h2 {
+  font-family: "Poppins", serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color:#000000;
+  margin-top: 3rem;
+  margin-left: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+  margin-left: -1.5rem;
+  margin-top: -2rem;
+  margin-right: -2rem;
+  margin-bottom: 0.75rem;
+  font-family: "DM Serif Text", serif;
+  font-weight: 600;
+  color: black;
+}
+h4 {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: "Poppins", serif;
+  font-weight: 500;
+}
+h6 {
+  font-size: 0.75rem;
+  text-align: center;
+  margin-top: 0rem;
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  color:#FFF3E0;
+  padding: 1rem 0rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Formatted text for displaying recipe */
+pre {
+  font-family: "Poppins", serif;
+  margin-top: 7rem;
+  margin-left: 5rem;
+  margin-right: 2.2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  text-align: left;
+  font-weight: 400;
+  color: black;
+}
+
+/* Div used to center-align titles*/
+.home-center {
+  text-align: center;
+}
+/* Div used to center-align title on home page (overtop images) */
+.home-center2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+/* Buttons */
+.find-new-recipe {
+  display: block;
+  margin: auto;
+  background-color:#FFF3E0;
+  color: #c28800;
+  border-radius: 25px;
+  border-color:#cf9510;
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding: 1rem 1rem;
+  margin-top: 3rem;
+  transition: all 0.5s;
+}
+/* Hover animation */
+.find-new-recipe span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.find-new-recipe span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.find-new-recipe:hover span {
+  padding-right: 25px;
+}
+.find-new-recipe:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* Checkboxes */
+/* Div container that holds checkboxes and categories */
+.multiple-selection {
+  margin: auto;
+  align-items: center;
+  width: 70%;
+  background-color: white;
+  z-index: 0;
+}
+/* Category */
+.select-box {
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+/* When the category is clicked on */
+.select-box select {
+  text-align: center;
+  background-color: #cf9510;
+  color: white;
+  font-family: "Poppins", serif;
+  font-size: 2rem;
+  width: 100%;
+  font-weight: bold;
+  z-index: 1;
+}
+.over-select {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+/* Checkboxes */
+.checkboxes {
+  display: none;
+  border: 1px solid #cf9510;
+  z-index: 1;
+}
+/* Each individual checkbox */
+.checkboxes label {
+  display: block;
+  font-family: "Poppins", serif;
+  font-size: 1.25rem;
+  margin-left: 1rem;
+  margin-bottom: 0.4rem;
+  z-index: 1;
+}
+/* Checkboxes hovered over */
+.checkboxes label:hover {
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Checkboxes for meal type selection */
+.meal-selection {
+  align-items: center;
+  display: block;
+  font-family: "Poppins", serif;
+  font-size: 2rem;
+  margin-left: 1rem;
+  margin-bottom: 0.4rem;
+  margin-top: 1rem;
+  z-index: 1;
+  text-align: center;
+}
+.meal-selection label:hover {
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Form with input fields */
+form {
+  text-align: center;
+  border: 1.5px solid #cf9510;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-left: 20%;
+  margin-right: 20%;
+}
+label {
+  display: inline-block;
+  font-family: "Poppins", serif;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  text-align: left;
+}
+/* Input boxes */
+input {
+  width: 50%;
+  height: 10%;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  font-family: "Poppins", serif;
+}
+
+/* Div that holds slideshow on main.html */
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+}
+/* Slideshow of images on main page */
+.slideshow-container {
+  margin-top: 5rem;
+  position: relative;
+  z-index: 1;
+  background-color: #000000;
+}
+/* Contains slide's content */
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+/* Hiding the images by default */
+.myslides {
+  display: none;
+}
+/* Title on main.html */
+.text {
+  font-family: "DM Serif Text", serif;
+  color:#FFF3E0;
+  font-size: 4.3rem;
+  font-weight: 600;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 10rem;
+  width: 100%;
+  text-align: center;
+}
+/* Caption */
+.caption {
+  font-family: "Poppins", serif;
+  color:#FFF3E0;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 6rem;
+  width: 100%;
+  text-align: center;
+}
+/* Dots */
+.dot {
+  height: 0.5rem;
+  width: 0.5rem;
+  margin: 0 2px;
+  margin-top: 1rem;
+  background-color:#e0a3167c;
+  border-radius: 50%;
+  display: inline-block;
+}
+.active {
+  background-color: #e0a316;
+}
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Sections on main.html */
+/* Divide the page: one side contains icon, the other contains text */
+/* Div that contains icon */
+.icon-section {
+  width: 20%;
+  margin-left: 1rem;
+  display: inline-block;
+  text-align: center;
+}
+/* Div that contains text */
+.text-section {
+  width: 70%;
+  margin-left: 0rem;
+  display: inline-block;
+  text-align: center;
+  margin-right: 2rem;
+}
+
+/* Lines on main.html */
+hr {
+  border-top: #e0a416 3px dotted;
+  width: 95%;
+  margin-top: 3rem;
+  margin-left: 3rem;
+  margin-right: 4rem;
+  text-align: center;
+}
+
+/* Selection menu for meal type */
+.meal-type-container {
+  margin: 2rem auto;
+  width: 80%;
+  max-width: 300px;
+}
+#mealtype {
+  width: 100%;
+  padding: 10px;
+  font-family: "Poppins", serif;
+  font-size: 1.2rem;
+  color: #000000;
+  background-color: #FFF3E0;
+  border: 2px solid #e0a316;
+  border-radius: 5px;
+  /* Removing the default appearance */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* Dropdown arrow */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+  /* Places the arrow on the right side */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  cursor: pointer;
+}
+/* When the select menu is clicked on */
+#mealtype:focus {
+  outline: none;
+  border-color: #cf9510;
+  box-shadow: 0 0 5px rgba(255, 87, 34, 0.5);
+}
+/* Options within the select menu */
+#mealtype option {
+  background-color: #FFF3E0;
+  color: #000000;
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #e0a416;
+  -moz-box-shadow: 0 -2px 4px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 -2px 4px rgba(0,0,0,0.5);
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.5);
+  /*border-top:#cf9510 2.25px solid;*/
+  color: #FFF3E0;
+  padding: 0.5rem 0rem;
+  margin-top: 2rem;
+  z-index: 10;
+}

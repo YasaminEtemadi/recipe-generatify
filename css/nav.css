@@ -1,0 +1,97 @@
+/* Navbar */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+ul {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    list-style: none;
+    background-color: white;
+    color: white;
+    border-bottom: #e0a416 2.25px solid;
+    background-color: #FFF3E0;
+    z-index: 10000;
+}
+ul li {
+    display: inline-block;
+    position: relative;
+}
+ul li a {
+    display: block;
+    padding: 0rem 0rem;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family:"Poppins", serif;
+}
+
+/* Hovering over navbar elements */
+ul li:hover {
+    cursor: pointer;
+}
+ul li a:hover {
+    cursor: pointer;
+}
+
+/* Menu button on right side of navbar */
+.topnav-right {
+    float: right;
+    margin-right: 2rem;
+}
+
+/* Side navbar */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    background-color: #FFF3E0;
+    overflow-x: hidden; /* no horizontal scrolling */
+    padding-top: 1rem;
+    transition: 0.5s; /* sliding effect */
+
+    /* Shadows */
+    -moz-box-shadow: 0 -2px 4px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 -2px 4px rgba(0,0,0,0.5);
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.5);
+}
+.sidenav a {
+    padding: 2rem 1rem;
+    color: black;
+    display: block;
+    transition: 0.3s;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+
+    /* Underline settings*/
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-color: #e0a416;
+    text-decoration-thickness: 0.2rem;
+
+    text-align: center;
+    font-size: 1rem;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+}
+.sidenav a:hover {
+    cursor: pointer;
+    color: #e0a416;
+}
+.sidenav .close-menu-btn {
+    position: absolute;
+    top: 0;
+    left: 0.5rem;
+    margin-left: 0.5rem;
+}
